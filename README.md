@@ -26,21 +26,21 @@ It includes:
 
 ## 📁 Project Structure
 
-src/main/java/com/llb
-├── configuration
-│ └── AppSecurityConfig.java
-├── controller
-│ └── CustomerController.java
-├── filter
-│ └── AppFilter.java
-├── model
-│ └── Customer.java
-├── repository
-│ └── CustomerRepository.java
-├── service
-│ ├── CustomerService.java
-│ └── JwtService.java
-└── JwtSecurityApplication.java
+        src/main/java/com/llb
+        ├── configuration
+        │ └── AppSecurityConfig.java
+        ├── controller
+        │ └── CustomerController.java
+        ├── filter
+        │ └── AppFilter.java
+        ├── model
+        │ └── Customer.java
+        ├── repository
+        │ └── CustomerRepository.java
+        ├── service
+        │ ├── CustomerService.java
+        │ └── JwtService.java
+        └── JwtSecurityApplication.java
 
 🔐 Security Flow
 
