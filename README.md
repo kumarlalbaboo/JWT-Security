@@ -26,3 +26,46 @@ It includes:
 
 ## 📁 Project Structure
 
+src/main/java/com/llb
+├── configuration
+│ └── AppSecurityConfig.java
+├── controller
+│ └── CustomerController.java
+├── filter
+│ └── AppFilter.java
+├── model
+│ └── Customer.java
+├── repository
+│ └── CustomerRepository.java
+├── service
+│ ├── CustomerService.java
+│ └── JwtService.java
+└── JwtSecurityApplication.java
+
+🔐 Security Flow
+
+User registers (/api/register)
+
+User logs in (/api/login)
+
+JWT token is generated
+
+Client sends token in header:
+
+Authorization: Bearer <JWT_TOKEN>
+
+
+OncePerRequestFilter validates token
+
+SecurityContext is set
+
+Protected APIs are accessible
+
+🚀 API Endpoints
+Public APIs
+Method	Endpoint	Description
+POST	/api/register	Register user
+POST	/api/login	Login & get JWT
+Protected APIs
+Method	Endpoint	Description
+GET	/api/**	Requires JWT
