@@ -44,28 +44,30 @@ It includes:
 
 🔐 Security Flow
 
-User registers (/api/register)
+        1. User registers (/api/register)
+        
+        2. User logs in (/api/login)
+        
+        3. JWT token is generated
+        
+        4. Client sends token in header:
+                Authorization: Bearer <JWT_TOKEN>
+        
+        5. OncePerRequestFilter validates token
+        
+        6. SecurityContext is set
+        
+        7. Protected APIs are accessible
 
-User logs in (/api/login)
-
-JWT token is generated
-
-Client sends token in header:
-
-Authorization: Bearer <JWT_TOKEN>
-
-
-OncePerRequestFilter validates token
-
-SecurityContext is set
-
-Protected APIs are accessible
-
-🚀 API Endpoints
-Public APIs
-Method	Endpoint	Description
-POST	/api/register	Register user
-POST	/api/login	Login & get JWT
-Protected APIs
-Method	Endpoint	Description
-GET	/api/**	Requires JWT
+        🚀 API Endpoints
+        Public APIs
+                Method	Endpoint	Description
+                
+                POST	/api/register	Register user
+                
+                POST	/api/login	Login & get JWT
+        
+        Protected APIs
+                Method	Endpoint	Description
+                
+                GET	/api/**	Requires JWT
